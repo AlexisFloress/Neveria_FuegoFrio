@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101710">
+    <meta name="description" content="Ruleta Fuego Frío de La Nevería. Gira y descubre tu resultado.">
+    <title>Ruleta Fuego Frío | La Nevería</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="brand" aria-label="La Nevería">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>La Nevería</span>
+      </div>
+      <span class="header-tag">RETO NIVEL 3</span>
+    </header>
+
+    <main class="experience">
+      <section class="wheel-section" aria-label="Ruleta de premios">
+        <div class="wheel-stage">
+          <div class="pointer" aria-hidden="true"></div>
+          <div class="wheel-ring">
+            <div class="wheel" id="wheel" role="img" aria-label="Ruleta de seis segmentos: dos paletas gratis, dos vuelve a intentarlo y dos descuentos de 50% en una segunda paleta">
+              <div class="slice-label dark" style="--angle:0deg;--counter:0deg"><span>GANASTE<br>UNA PALETA</span></div>
+              <div class="slice-label dark" style="--angle:60deg;--counter:-60deg"><span>VUELVE A<br>INTENTARLO</span></div>
+              <div class="slice-label light" style="--angle:120deg;--counter:-120deg"><span>50% EN TU<br>SEGUNDA</span></div>
+              <div class="slice-label dark" style="--angle:180deg;--counter:-180deg"><span>GANASTE<br>UNA PALETA</span></div>
+              <div class="slice-label dark" style="--angle:240deg;--counter:-240deg"><span>VUELVE A<br>INTENTARLO</span></div>
+              <div class="slice-label light" style="--angle:300deg;--counter:-300deg"><span>50% EN TU<br>SEGUNDA</span></div>
+              <div class="wheel-center" aria-hidden="true"><span>FUEGO<br>FRÍO</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="wheel-caption">Tres resultados · dos oportunidades por resultado</p>
+      </section>
+
+      <section class="intro" aria-labelledby="title">
+        <p class="eyebrow">PALETA DE LIMÓN AL CHILE <span aria-hidden="true">✦</span> LA NEVERÍA</p>
+        <h1 id="title"><span>FUEGO</span><strong>FRÍO</strong></h1>
+        <p class="lead">¿Qué te toca hoy? Gira la ruleta y descubre tu resultado.</p>
+        <div class="flavors" aria-label="Sabores del concepto">
+          <span>LIMÓN</span><span>SAL</span><span>CHILE</span>
+        </div>
+        <button type="button" class="spin-button" id="spin-button">
+          <span id="button-label">GIRAR LA RULETA</span><span class="button-spark" aria-hidden="true">✳</span>
+        </button>
+        <p class="status" id="status" role="status" aria-live="polite">Pulsa el botón para empezar.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>FUEGO FRÍO · RETO NIVEL 3</span>
+      <span>Propuesta académica · dinámica conceptual</span>
+    </footer>
+
+    <dialog id="result-dialog" class="result-dialog" aria-labelledby="result-title">
+      <div class="result-content">
+        <button class="close-button" id="close-dialog" type="button" aria-label="Cerrar resultado">×</button>
+        <p class="result-kicker">LA RULETA DECIDIÓ</p>
+        <h2 id="result-title"></h2>
+        <img id="result-image" src="" alt="" width="1080" height="1350">
+        <button type="button" class="again-button" id="again-button">GIRAR DE NUEVO</button>
+      </div>
+    </dialog>
+  </body>
+</html>
